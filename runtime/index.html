@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>bash-yunzai runtime</title>
+<!-- 按顺序同步加载：全局对象 → Buffer → Node 内置模块 → CJS 加载器 → import map，最后加载 Yunzai -->
+<script src="boot.js"></script>
+<script src="buffer.js"></script>
+<script src="node-core.js"></script>
+<script src="node-stream.js"></script>
+<script src="node-fs.js"></script>
+<script src="node-proc.js"></script>
+<script src="node-crypto.js"></script>
+<script src="require.js"></script>
+<script src="importmap.js"></script>
+</head>
+<body>
+<script>
+  import("./main.js").catch(err => {
+    logger?.error ? logger.error("启动失败", err) : __yzLog("error", `启动失败 ${err?.stack || err}`)
+  })
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+# 运行时生成
+/config/*
+!/config/default_config
+!/config/bash.conf
+/data
+/logs
+/temp
+/node_modules
+/pnpm-lock.yaml
+/resources
+
+# 第三方插件不随仓库分发，只保留内置的
+/plugins/*
+!/plugins/adapter
+!/plugins/system
+!/plugins/other
+!/plugins/example
+/plugins/example/*
+!/plugins/example/bash-test.js
+!/plugins/example/resources
+/plugins/example/resources/*
+!/plugins/example/resources/bash-test.html
+
+/renderers/*/config.yaml

@@ -1,0 +1,4 @@
+# bash 脚本在 CRLF 下会报错，统一用 LF
+* text=auto eol=lf
+*.png binary
+*.jpg binary

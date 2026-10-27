@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body { margin: 0; font-family: "Microsoft YaHei", sans-serif; }
+  #container { width: 640px; padding: 28px; background: linear-gradient(135deg, #2b3a67, #6a4c93); color: #fff; }
+  h1 { margin: 0 0 18px; font-size: 26px; }
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .card { background: rgba(255, 255, 255, .12); border-radius: 12px; padding: 12px; }
+  .bar { height: 6px; border-radius: 3px; background: rgba(255, 255, 255, .2); margin-top: 8px; overflow: hidden; }
+  .bar i { display: block; height: 100%; background: #ffd166; }
+  .foot { margin-top: 16px; font-size: 12px; opacity: .6; text-align: right; }
+</style>
+</head>
+<body>
+<div id="container">
+  <h1>{{title}}</h1>
+  <div class="grid">
+    {{each list item}}
+    <div class="card">
+      <b>{{item.name}}</b> Lv.{{item.lv}}
+      <div class="bar"><i style="width: {{item.lv / 90 * 100}}%"></i></div>
+    </div>
+    {{/each}}
+  </div>
+  <div class="foot">{{@copyright}}</div>
+</div>
+</body>
+</html>

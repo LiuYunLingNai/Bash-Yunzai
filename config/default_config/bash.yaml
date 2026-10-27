@@ -1,0 +1,8 @@
+# bash-yunzai 专用配置
+# OneBot v11 正向 WebSocket 地址（bash 作为客户端去连，只支持 ws://）
+# NapCat / Lagrange 等需要开启「正向 WebSocket 服务器」
+onebot_url: ws://127.0.0.1:3001
+# 访问令牌，对应协议端的 access_token
+token:
+# 交给哪个适配器处理（plugins/adapter 下的 path）
+adapter: OneBotv11

@@ -1,0 +1,9 @@
+# 和原版一样把插件纳入工作区，pnpm i 才会装插件自己的依赖（如 miao-plugin 的 cheerio）
+packages:
+  - 'plugins/**'
+
+strictDepBuilds: false
+allowBuilds:
+  classic-level: true
+  puppeteer: true
+  sqlite3: true
